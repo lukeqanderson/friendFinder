@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "./Card";
 
+// creates a list of cards with each card representing a friend from 
+// friends.js array
 const CardList = ({friends}) => {
     return (
         <div>  

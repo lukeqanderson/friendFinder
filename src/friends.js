@@ -1,3 +1,4 @@
+// list of all friends to be displayed with their coresponding information.
 export const friends = [
     {
         id: 1, 
