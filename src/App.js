@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CardList from "./CardList";
 import { friends } from './friends';
+import Scroll from './Scroll';
 import SearchBox from './SearchBox';
 
 // creates a class App with a state containing friends and a searchfield
@@ -12,9 +13,15 @@ class App extends Component {
         // calls super to call the constructor of Component class
         super()
         this.state = {
-            friends: friends,
+            friends: [],
             searchfield: '',
         }
+    }
+
+    // sets the state to include the friends for friends.js file on 
+    // mount
+    componentDidMount() {
+        this.setState( { friends: friends } );
     }
 
     // a function for when input changes, an event occurs that changes the 
@@ -43,7 +50,11 @@ class App extends Component {
                 {/* sets search change to onSearchChange to allows
                 for the searchBox to adjust as input is entered. */}
                 <SearchBox searchChange={this.onSearchChange} />
-                <CardList friends={filteredFriends}/> 
+                {/* to allow for rendering the children within the 
+                Scroll component for sticky nav bar*/}
+                <Scroll>
+                    <CardList friends={filteredFriends}/> 
+                </Scroll>
             </div>
         );
     }
