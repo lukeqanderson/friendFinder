@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/friendFinder/static/css/main.a9379480.css",
+    "main.js": "/friendFinder/static/js/main.7abed743.js",
+    "static/js/787.cfd8f164.chunk.js": "/friendFinder/static/js/787.cfd8f164.chunk.js",
+    "index.html": "/friendFinder/index.html",
+    "main.a9379480.css.map": "/friendFinder/static/css/main.a9379480.css.map",
+    "main.7abed743.js.map": "/friendFinder/static/js/main.7abed743.js.map",
+    "787.cfd8f164.chunk.js.map": "/friendFinder/static/js/787.cfd8f164.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9379480.css",
+    "static/js/main.7abed743.js"
+  ]
+}
