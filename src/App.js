@@ -3,6 +3,7 @@ import CardList from "./CardList";
 import { friends } from './friends';
 import Scroll from './Scroll';
 import SearchBox from './SearchBox';
+import ErrorBoundry from "./errorBoundry";
 
 // creates a class App with a state containing friends and a searchfield
 // which allows for the cardList and searchBox to communites and adjust.
@@ -53,7 +54,10 @@ class App extends Component {
                 {/* to allow for rendering the children within the 
                 Scroll component for sticky nav bar*/}
                 <Scroll>
-                    <CardList friends={filteredFriends}/> 
+                    {/* error boundry in case cardList doesn't load */}
+                    <ErrorBoundry>
+                        <CardList friends={filteredFriends}/> 
+                    </ErrorBoundry>
                 </Scroll>
             </div>
         );
